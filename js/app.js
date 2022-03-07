@@ -485,6 +485,7 @@ const appStateModule = {
       commit,
       rootState
     }) => {
+      console.log(rootState.firebase.user?.uid);
       firebase.listenForChanges(`users/${rootState.firebase.user?.uid}`, user => commit('updateUser', user));
     }
   },
@@ -550,10 +551,10 @@ const firebaseModule = {
       dispatch
     }) => {
       const auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.getAuth)();
-      dispatch(_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
       (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.onAuthStateChanged)(auth, user => {
         if (user) {
           commit(SET_USER, user);
+          dispatch(_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
         } else {
           commit(SET_USER, null);
         }

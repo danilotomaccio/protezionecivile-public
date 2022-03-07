@@ -682,11 +682,12 @@ var appStateModule = {
       });
     },
     listenUser: function listenUser(_ref2) {
-      var _rootState$firebase$u;
+      var _rootState$firebase$u, _rootState$firebase$u2;
 
       var commit = _ref2.commit,
           rootState = _ref2.rootState;
-      firebase.listenForChanges("users/".concat((_rootState$firebase$u = rootState.firebase.user) === null || _rootState$firebase$u === void 0 ? void 0 : _rootState$firebase$u.uid), function (user) {
+      console.log((_rootState$firebase$u = rootState.firebase.user) === null || _rootState$firebase$u === void 0 ? void 0 : _rootState$firebase$u.uid);
+      firebase.listenForChanges("users/".concat((_rootState$firebase$u2 = rootState.firebase.user) === null || _rootState$firebase$u2 === void 0 ? void 0 : _rootState$firebase$u2.uid), function (user) {
         return commit('updateUser', user);
       });
     }
@@ -759,10 +760,10 @@ var firebaseModule = {
       var commit = _ref.commit,
           dispatch = _ref.dispatch;
       var auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.getAuth)();
-      dispatch(_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
       (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.onAuthStateChanged)(auth, function (user) {
         if (user) {
           commit(SET_USER, user);
+          dispatch(_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
         } else {
           commit(SET_USER, null);
         }
