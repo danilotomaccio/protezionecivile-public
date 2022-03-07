@@ -485,7 +485,6 @@ const appStateModule = {
       commit,
       rootState
     }) => {
-      console.log(rootState.firebase.user?.uid);
       firebase.listenForChanges(`users/${rootState.firebase.user?.uid}`, user => commit('updateUser', user));
     }
   },

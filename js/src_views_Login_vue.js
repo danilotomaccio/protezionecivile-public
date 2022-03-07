@@ -14,6 +14,12 @@ __webpack_require__.r(__webpack_exports__);
  // import { store } from "../store"; //useStore sembra non funzionare
 
 /* harmony default export */ __webpack_exports__["default"] = ((0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
+  data() {
+    return {
+      publicPath: "/protezionecivile-public/"
+    };
+  },
+
   methods: {
     async signin() {
       const provider = new firebase_auth__WEBPACK_IMPORTED_MODULE_0__.GoogleAuthProvider();
@@ -52,23 +58,18 @@ const _hoisted_1 = {
 const _hoisted_2 = {
   class: "container"
 };
-
-const _hoisted_3 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+const _hoisted_3 = {
   class: "icon"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "/img/icons/ android-chrome-192x192.png",
-  alt: "Logo...piu o meno"
-})], -1
-/* HOISTED */
-));
+};
+const _hoisted_4 = ["src"];
 
-const _hoisted_4 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+const _hoisted_5 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "title"
 }, "Protezione civile gruppo lucano Tricarico", -1
 /* HOISTED */
 ));
 
-const _hoisted_5 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+const _hoisted_6 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "google-icon-wrapper"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   class: "google-icon-svg",
@@ -77,26 +78,31 @@ const _hoisted_5 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_
 /* HOISTED */
 ));
 
-const _hoisted_6 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+const _hoisted_7 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   class: "btn-text"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, "Accedi con Google")], -1
 /* HOISTED */
 ));
 
-const _hoisted_7 = [_hoisted_5, _hoisted_6];
+const _hoisted_8 = [_hoisted_6, _hoisted_7];
 
-const _hoisted_8 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+const _hoisted_9 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "description"
 }, " Per usare quest'app devi essere loggato (cosí non puoi fare il furbo). Al momento puoi fare il login solo con Google. Non hai Google?! Nessun problema! Puoi usare uno dei piccioni viaggiatori della protezione civile per avvisare la direzione che stai per prendere uno degli asini messi a disposizione per andare a spegnere un incendio nella vigna in piazza ", -1
 /* HOISTED */
 ));
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: `${_ctx.publicPath}img/icons/android-chrome-192x192.png`,
+    alt: "Logo...piu o meno"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_4)]), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     class: "google-btn",
     onClick: _cache[0] || (_cache[0] = //@ts-ignore
     (...args) => _ctx.signin && _ctx.signin(...args))
-  }, _hoisted_7), _hoisted_8])]);
+  }, _hoisted_8), _hoisted_9])]);
 }
 
 /***/ }),

@@ -682,12 +682,11 @@ var appStateModule = {
       });
     },
     listenUser: function listenUser(_ref2) {
-      var _rootState$firebase$u, _rootState$firebase$u2;
+      var _rootState$firebase$u;
 
       var commit = _ref2.commit,
           rootState = _ref2.rootState;
-      console.log((_rootState$firebase$u = rootState.firebase.user) === null || _rootState$firebase$u === void 0 ? void 0 : _rootState$firebase$u.uid);
-      firebase.listenForChanges("users/".concat((_rootState$firebase$u2 = rootState.firebase.user) === null || _rootState$firebase$u2 === void 0 ? void 0 : _rootState$firebase$u2.uid), function (user) {
+      firebase.listenForChanges("users/".concat((_rootState$firebase$u = rootState.firebase.user) === null || _rootState$firebase$u === void 0 ? void 0 : _rootState$firebase$u.uid), function (user) {
         return commit('updateUser', user);
       });
     }
