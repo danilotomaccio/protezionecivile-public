@@ -9,24 +9,21 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vue_runtime_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vue/runtime-core */ "./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var _vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/runtime-core */ "./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
 /* harmony import */ var _services_FirebaseService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/FirebaseService */ "./src/services/FirebaseService.ts");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store */ "./src/store/index.ts");
-/* harmony import */ var _store_modules_appState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/modules/appState */ "./src/store/modules/appState.ts");
-/* harmony import */ var _store_modules_firebaseModule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/modules/firebaseModule */ "./src/store/modules/firebaseModule.ts");
+/* harmony import */ var _store_modules_firebaseModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/modules/firebaseModule */ "./src/store/modules/firebaseModule.ts");
 
 
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ((0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_4__.defineComponent)({
+/* harmony default export */ __webpack_exports__["default"] = ((0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__.defineComponent)({
   mounted() {
     const app = _services_FirebaseService__WEBPACK_IMPORTED_MODULE_0__.FirebaseService.getApp(); //useStore(key).commit(SET_APP, app);
 
-    (0,vuex__WEBPACK_IMPORTED_MODULE_5__.useStore)(_store__WEBPACK_IMPORTED_MODULE_1__.key).dispatch(_store_modules_firebaseModule__WEBPACK_IMPORTED_MODULE_3__.LISTEN_USER_AUTH);
-    (0,vuex__WEBPACK_IMPORTED_MODULE_5__.useStore)(_store__WEBPACK_IMPORTED_MODULE_1__.key).dispatch(_store_modules_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
+    (0,vuex__WEBPACK_IMPORTED_MODULE_4__.useStore)(_store__WEBPACK_IMPORTED_MODULE_1__.key).dispatch(_store_modules_firebaseModule__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER_AUTH);
   },
 
   methods: {//
@@ -529,6 +526,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/auth */ "./node_modules/firebase/auth/dist/index.esm.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/store/utils.ts");
+/* harmony import */ var _appState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./appState */ "./src/store/modules/appState.ts");
+
 
 
 const firebaseModule = {
@@ -547,9 +546,11 @@ const firebaseModule = {
   },
   actions: {
     listenUserAuth: ({
-      commit
+      commit,
+      dispatch
     }) => {
       const auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.getAuth)();
+      dispatch(_appState__WEBPACK_IMPORTED_MODULE_2__.LISTEN_USER);
       (0,firebase_auth__WEBPACK_IMPORTED_MODULE_0__.onAuthStateChanged)(auth, user => {
         if (user) {
           commit(SET_USER, user);
