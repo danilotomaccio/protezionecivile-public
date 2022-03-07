@@ -43,13 +43,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Users_TomaccioD_Documents_other_protezione_civile_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
 /* harmony import */ var _Users_TomaccioD_Documents_other_protezione_civile_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
 /* harmony import */ var _Users_TomaccioD_Documents_other_protezione_civile_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var vue_class_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-class-component */ "./node_modules/vue-class-component/dist/vue-class-component.esm-bundler.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var vue_class_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vue-class-component */ "./node_modules/vue-class-component/dist/vue-class-component.esm-bundler.js");
 /* harmony import */ var _components_UseCarButton_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/UseCarButton.vue */ "./src/components/UseCarButton.vue");
 /* harmony import */ var _components_LeaveCarButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/LeaveCarButton.vue */ "./src/components/LeaveCarButton.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/store */ "./src/store/index.ts");
-/* harmony import */ var _store_modules_appState__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store/modules/appState */ "./src/store/modules/appState.ts");
+/* harmony import */ var _components_AdminButton_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/AdminButton.vue */ "./src/components/AdminButton.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./src/store/index.ts");
+/* harmony import */ var _store_modules_appState__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store/modules/appState */ "./src/store/modules/appState.ts");
+
 
 
 
@@ -74,33 +76,34 @@ var Home = /*#__PURE__*/function (_Vue) {
   }
 
   return (0,_Users_TomaccioD_Documents_other_protezione_civile_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Home);
-}(vue_class_component__WEBPACK_IMPORTED_MODULE_8__.Vue);
+}(vue_class_component__WEBPACK_IMPORTED_MODULE_9__.Vue);
 
-Home = (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__decorate)([(0,vue_class_component__WEBPACK_IMPORTED_MODULE_8__.Options)({
+Home = (0,tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)([(0,vue_class_component__WEBPACK_IMPORTED_MODULE_9__.Options)({
   components: {
     UseCarButton: _components_UseCarButton_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    LeaveCarButton: _components_LeaveCarButton_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    LeaveCarButton: _components_LeaveCarButton_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    AdminButton: _components_AdminButton_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   mounted: function mounted() {
     // if (this.hasPermission("usecar")) { //TODO !!!
-    _store__WEBPACK_IMPORTED_MODULE_6__.store.dispatch(_store_modules_appState__WEBPACK_IMPORTED_MODULE_7__.LISTEN_CARS); // }
+    _store__WEBPACK_IMPORTED_MODULE_7__.store.dispatch(_store_modules_appState__WEBPACK_IMPORTED_MODULE_8__.LISTEN_CARS); // }
   },
   computed: {
     displayName: function displayName() {
       var _useStore$state$fireb;
 
-      return (_useStore$state$fireb = (0,vuex__WEBPACK_IMPORTED_MODULE_10__.useStore)(_store__WEBPACK_IMPORTED_MODULE_6__.key).state.firebase.user) === null || _useStore$state$fireb === void 0 ? void 0 : _useStore$state$fireb.displayName;
+      return (_useStore$state$fireb = (0,vuex__WEBPACK_IMPORTED_MODULE_11__.useStore)(_store__WEBPACK_IMPORTED_MODULE_7__.key).state.firebase.user) === null || _useStore$state$fireb === void 0 ? void 0 : _useStore$state$fireb.displayName;
     },
     usingCar: function usingCar() {
       var _store$state$appState;
 
-      return (_store$state$appState = _store__WEBPACK_IMPORTED_MODULE_6__.store.state.appState.user) === null || _store$state$appState === void 0 ? void 0 : _store$state$appState.usingCar;
+      return (_store$state$appState = _store__WEBPACK_IMPORTED_MODULE_7__.store.state.appState.user) === null || _store$state$appState === void 0 ? void 0 : _store$state$appState.usingCar;
     },
     usecar: function usecar() {
       return this.hasPermission("usecar");
     },
     headerString: function headerString() {
-      var usedCar = _store__WEBPACK_IMPORTED_MODULE_6__.store.getters.usedCar;
+      var usedCar = _store__WEBPACK_IMPORTED_MODULE_7__.store.getters.usedCar;
 
       if (usedCar) {
         return "Come va la ".concat(usedCar.model, "?");
@@ -111,7 +114,7 @@ Home = (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__decorate)([(0,vue_class_component
   },
   methods: {
     hasPermission: function hasPermission(permission) {
-      var user = _store__WEBPACK_IMPORTED_MODULE_6__.store.state.appState.user;
+      var user = _store__WEBPACK_IMPORTED_MODULE_7__.store.state.appState.user;
 
       if (user) {
         return user.permissions.indexOf(permission) >= 0;
@@ -213,7 +216,7 @@ var _hoisted_6 = {
   class: "car"
 };
 var _hoisted_7 = {
-  key: 1,
+  key: 2,
   class: "no_permission"
 };
 
@@ -225,13 +228,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_UseCarButton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("UseCarButton");
 
+  var _component_AdminButton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("AdminButton");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.headerString), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_ctx.usecar ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [_ctx.usingCar ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_LeaveCarButton, {
     key: 0
   })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_UseCarButton, {
     key: 1
-  }))])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, _hoisted_10)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  <div class=\"other\">\n          Per il momento è tutto ma se lavorerai sodo e farai tutto quello che\n          ti viene detto senza fare domande un giorno anche tu potrai fare altre\n          cose oltre a quelle sopra elencate\n        </div> ")])])]);
+  }))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.hasPermission('admin') ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_AdminButton, {
+    key: 1
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), !_ctx.hasPermission('admin') && !_ctx.usecar ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, _hoisted_10)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  <div class=\"other\">\n          Per il momento è tutto ma se lavorerai sodo e farai tutto quello che\n          ti viene detto senza fare domande un giorno anche tu potrai fare altre\n          cose oltre a quelle sopra elencate\n        </div> ")])])]);
 }
 
 /***/ }),
@@ -336,6 +343,16 @@ var routes = [{
   name: 'Leave car',
   component: function component() {
     return Promise.all(/*! import() */[__webpack_require__.e("src_services_CarService_ts-src_components_Activity_vue"), __webpack_require__.e("src_views_LeaveCar_vue")]).then(__webpack_require__.bind(__webpack_require__, /*! ../views/LeaveCar.vue */ "./src/views/LeaveCar.vue"));
+  },
+  meta: {
+    transition: 'expand-card',
+    requireLogin: true
+  }
+}, {
+  path: '/admin',
+  name: 'Leave car',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "src_views_Admin_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Admin.vue */ "./src/views/Admin.vue"));
   },
   meta: {
     transition: 'expand-card',
@@ -870,6 +887,33 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vue_runtime_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/runtime-core */ "./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js");
+/* harmony import */ var _ActivityButton_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ActivityButton.vue */ "./src/components/ActivityButton.vue");
+
+
+/* harmony default export */ __webpack_exports__["default"] = ((0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
+  components: {
+    ActivityButton: _ActivityButton_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {
+    openUseCarPage: function openUseCarPage() {
+      this.$router.push({
+        path: "admin"
+      });
+    }
+  }
+}));
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/LeaveCarButton.vue?vue&type=script&lang=js":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/LeaveCarButton.vue?vue&type=script&lang=js ***!
@@ -966,6 +1010,68 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "icon", {}, undefined, true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "title", {}, undefined, true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "description", {}, undefined, true)])])], 2
   /* CLASS */
   );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=template&id=7521c4e1":
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=template&id=7521c4e1 ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": function() { return /* binding */ render; }
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  "enable-background": "new 0 0 20 20",
+  height: "48px",
+  viewBox: "0 0 20 20",
+  width: "48px",
+  fill: "#2c3e50"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("g", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("rect", {
+  fill: "none",
+  height: "20",
+  width: "20"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("g", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("g", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M13,9c0.35,0,0.68,0.06,1,0.14V6.18L9,4L4,6.18v3.27c0,3.03,2.13,5.86,5,6.55c0.35-0.08,0.7-0.2,1.02-0.35 C9.39,14.94,9,14.02,9,13C9,10.79,10.79,9,13,9z"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M13,10c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3s3-1.34,3-3C16,11.34,14.66,10,13,10z M13,11.03c0.47,0,0.84,0.38,0.84,0.84 c0,0.46-0.38,0.84-0.84,0.84s-0.84-0.38-0.84-0.84C12.16,11.41,12.53,11.03,13,11.03z M13,15.06c-0.7,0-1.31-0.35-1.68-0.87 c0.04-0.54,1.13-0.81,1.68-0.81s1.64,0.27,1.68,0.81C14.31,14.72,13.7,15.06,13,15.06z"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Pannello di amministrazione ");
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Il potere é nelle tue mani ");
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_ActivityButton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ActivityButton");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_ActivityButton, {
+    onClick: _ctx.openUseCarPage
+  }, {
+    icon: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_1];
+    }),
+    title: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_2];
+    }),
+    description: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_3];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["onClick"]);
 }
 
 /***/ }),
@@ -1224,6 +1330,31 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./src/components/AdminButton.vue":
+/*!****************************************!*\
+  !*** ./src/components/AdminButton.vue ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AdminButton_vue_vue_type_template_id_7521c4e1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminButton.vue?vue&type=template&id=7521c4e1 */ "./src/components/AdminButton.vue?vue&type=template&id=7521c4e1");
+/* harmony import */ var _AdminButton_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminButton.vue?vue&type=script&lang=js */ "./src/components/AdminButton.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_TomaccioD_Documents_other_protezione_civile_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_TomaccioD_Documents_other_protezione_civile_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AdminButton_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AdminButton_vue_vue_type_template_id_7521c4e1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"src/components/AdminButton.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ __webpack_exports__["default"] = (__exports__);
+
+/***/ }),
+
 /***/ "./src/components/LeaveCarButton.vue":
 /*!*******************************************!*\
   !*** ./src/components/LeaveCarButton.vue ***!
@@ -1382,6 +1513,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/AdminButton.vue?vue&type=script&lang=js":
+/*!****************************************************************!*\
+  !*** ./src/components/AdminButton.vue?vue&type=script&lang=js ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AdminButton_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"]; }
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AdminButton_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AdminButton.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./src/components/LeaveCarButton.vue?vue&type=script&lang=js":
 /*!*******************************************************************!*\
   !*** ./src/components/LeaveCarButton.vue?vue&type=script&lang=js ***!
@@ -1426,6 +1573,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": function() { return /* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ActivityButton_vue_vue_type_template_id_fc65565e_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render; }
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ActivityButton_vue_vue_type_template_id_fc65565e_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ActivityButton.vue?vue&type=template&id=fc65565e&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ActivityButton.vue?vue&type=template&id=fc65565e&scoped=true");
+
+
+/***/ }),
+
+/***/ "./src/components/AdminButton.vue?vue&type=template&id=7521c4e1":
+/*!**********************************************************************!*\
+  !*** ./src/components/AdminButton.vue?vue&type=template&id=7521c4e1 ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": function() { return /* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AdminButton_vue_vue_type_template_id_7521c4e1__WEBPACK_IMPORTED_MODULE_0__.render; }
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_40_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AdminButton_vue_vue_type_template_id_7521c4e1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AdminButton.vue?vue&type=template&id=7521c4e1 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/AdminButton.vue?vue&type=template&id=7521c4e1");
 
 
 /***/ }),
