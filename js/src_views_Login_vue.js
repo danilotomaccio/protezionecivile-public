@@ -54,12 +54,21 @@ const _hoisted_2 = {
 };
 
 const _hoisted_3 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  class: "title"
-}, "Accedi", -1
+  class: "icon"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/img/icons/ android-chrome-192x192.png",
+  alt: "Logo...piu o meno"
+})], -1
 /* HOISTED */
 ));
 
 const _hoisted_4 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  class: "title"
+}, "Protezione civile gruppo lucano Tricarico", -1
+/* HOISTED */
+));
+
+const _hoisted_5 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "google-icon-wrapper"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   class: "google-icon-svg",
@@ -68,26 +77,26 @@ const _hoisted_4 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_
 /* HOISTED */
 ));
 
-const _hoisted_5 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+const _hoisted_6 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   class: "btn-text"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, "Accedi con Google")], -1
 /* HOISTED */
 ));
 
-const _hoisted_6 = [_hoisted_4, _hoisted_5];
+const _hoisted_7 = [_hoisted_5, _hoisted_6];
 
-const _hoisted_7 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+const _hoisted_8 = /*#__PURE__*/_withScopeId(() => /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "description"
 }, " Per usare quest'app devi essere loggato (cosí non puoi fare il furbo). Al momento puoi fare il login solo con Google. Non hai Google?! Nessun problema! Puoi usare uno dei piccioni viaggiatori della protezione civile per avvisare la direzione che stai per prendere uno degli asini messi a disposizione per andare a spegnere un incendio nella vigna in piazza ", -1
 /* HOISTED */
 ));
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     class: "google-btn",
     onClick: _cache[0] || (_cache[0] = //@ts-ignore
     (...args) => _ctx.signin && _ctx.signin(...args))
-  }, _hoisted_6), _hoisted_7])]);
+  }, _hoisted_7), _hoisted_8])]);
 }
 
 /***/ }),
@@ -109,7 +118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#login[data-v-26084dc2] {\n  display: flex;\n  height: 100vh;\n  align-items: center;\n  padding: 24px;\n}\n#login .container[data-v-26084dc2] {\n  padding: 10px;\n  border: 1px solid #2c3e50;\n  border-radius: 8px;\n  max-width: 450px;\n  margin: auto;\n}\n#login .container .title[data-v-26084dc2] {\n  margin: 18px;\n  font-weight: 600;\n  font-size: 20px;\n}\n#login .container .description[data-v-26084dc2] {\n  margin: 18px;\n}\n#login .container .title[data-v-26084dc2] {\n  margin: 18px;\n  font-weight: 600;\n  font-size: 20px;\n}\n#login .google-btn[data-v-26084dc2] {\n  display: flex;\n  align-content: center;\n  justify-content: center;\n  align-items: center;\n  border: 1px #2c3e50 solid;\n  border-radius: 4px;\n  width: 220px;\n  margin: auto;\n  cursor: pointer;\n}\n#login .google-btn .google-icon-wrapper[data-v-26084dc2] {\n  display: flex;\n  margin-right: 6px;\n}\n#login .google-btn[data-v-26084dc2]:hover {\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\n  z-index: 2;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#login[data-v-26084dc2] {\n  display: flex;\n  height: 100vh;\n  align-items: center;\n  padding: 0 24px;\n}\n#login .container[data-v-26084dc2] {\n  padding: 10px;\n  border: 1px solid #2c3e50;\n  border-radius: 8px;\n  max-width: 450px;\n  margin: auto;\n}\n#login .container .title[data-v-26084dc2] {\n  margin: 18px;\n  font-weight: 600;\n  font-size: 20px;\n}\n#login .container .description[data-v-26084dc2] {\n  margin: 18px;\n}\n#login .container .title[data-v-26084dc2] {\n  margin: 18px;\n  font-weight: 600;\n  font-size: 20px;\n}\n#login .google-btn[data-v-26084dc2] {\n  display: flex;\n  align-content: center;\n  justify-content: center;\n  align-items: center;\n  border: 1px #2c3e50 solid;\n  border-radius: 4px;\n  width: 220px;\n  margin: auto;\n  cursor: pointer;\n}\n#login .google-btn .google-icon-wrapper[data-v-26084dc2] {\n  display: flex;\n  margin-right: 6px;\n}\n#login .google-btn[data-v-26084dc2]:hover {\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\n  z-index: 2;\n}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
