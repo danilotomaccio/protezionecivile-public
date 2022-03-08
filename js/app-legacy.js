@@ -735,13 +735,13 @@ var FirebaseService = /*#__PURE__*/function () {
     (0,_Users_TomaccioD_Documents_other_protezione_civile_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FirebaseService);
 
     var firebaseConfig = {
-      apiKey: "AIzaSyCGLXls0uwohW8UczwMuMPgY61QRCyjydA",
-      authDomain: "soter-ia.firebaseapp.com",
-      databaseURL: "https://soter-ia.firebaseio.com",
-      projectId: "soter-ia",
-      storageBucket: "soter-ia.appspot.com",
-      messagingSenderId: "712755300293",
-      appId: "1:712755300293:web:9c91cc4c98e2a36b77edac"
+      apiKey: "AIzaSyC_5sSUzZkMofwuI4f6uF1CdKa5uBBzSU4",
+      authDomain: "pcgltricarico05.firebaseapp.com",
+      databaseURL: "https://pcgltricarico05-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "pcgltricarico05",
+      storageBucket: "pcgltricarico05.appspot.com",
+      messagingSenderId: "320152077505",
+      appId: "1:320152077505:web:f4c84686f061134a78c040"
     };
     this.app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_2__.initializeApp)(firebaseConfig); // useStore(key).commit(SET_APP, app);
 
