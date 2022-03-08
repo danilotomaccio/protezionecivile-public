@@ -35,7 +35,8 @@ __webpack_require__.r(__webpack_exports__);
       id: "odometer",
       question: "Contachilometri finale",
       type: _model_Section__WEBPACK_IMPORTED_MODULE_1__.SectionType.OPEN,
-      mandatory: true
+      mandatory: true,
+      inputMode: 'numeric'
     }, {
       id: "declarations",
       question: "Qualcosa da dichiarare?",
