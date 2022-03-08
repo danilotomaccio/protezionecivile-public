@@ -219,7 +219,6 @@ class CarService {
           causal
         }
       };
-      console.log(updates);
 
       try {
         return await this.db.updateValues(updates);

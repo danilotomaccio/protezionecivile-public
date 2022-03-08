@@ -245,7 +245,7 @@ var CarService = /*#__PURE__*/function () {
                 newKey = (0,firebase_database__WEBPACK_IMPORTED_MODULE_7__.push)((0,firebase_database__WEBPACK_IMPORTED_MODULE_7__.ref)(this.db.db)).key;
 
                 if (!user) {
-                  _context.next = 14;
+                  _context.next = 13;
                   break;
                 }
 
@@ -257,28 +257,27 @@ var CarService = /*#__PURE__*/function () {
                   userName: user.displayName,
                   causal: causal
                 }), _updates);
-                console.log(updates);
-                _context.prev = 5;
-                _context.next = 8;
+                _context.prev = 4;
+                _context.next = 7;
                 return this.db.updateValues(updates);
 
-              case 8:
+              case 7:
                 return _context.abrupt("return", _context.sent);
 
-              case 11:
-                _context.prev = 11;
-                _context.t0 = _context["catch"](5);
+              case 10:
+                _context.prev = 10;
+                _context.t0 = _context["catch"](4);
                 console.log(_context.t0);
 
-              case 14:
+              case 13:
                 throw new Error("User not logged trying to update");
 
-              case 15:
+              case 14:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[5, 11]]);
+        }, _callee, this, [[4, 10]]);
       }));
 
       function takeCar(_x, _x2, _x3) {
