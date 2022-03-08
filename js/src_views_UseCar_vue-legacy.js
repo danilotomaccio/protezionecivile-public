@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     sections: function sections() {
       var cars = _store__WEBPACK_IMPORTED_MODULE_8__.store.state.appState.cars;
-      return [{
+      var sect = [{
         id: "car",
         question: "Scegli una macchina",
         options: cars ? cars.filter(function (c) {
@@ -70,8 +70,10 @@ __webpack_require__.r(__webpack_exports__);
         id: "odometer",
         question: "Contachilometri alla partenza",
         type: _model_Section__WEBPACK_IMPORTED_MODULE_7__.SectionType.OPEN,
-        mandatory: true
+        mandatory: true,
+        inputMode: 'numeric'
       }];
+      return sect;
     }
   },
 

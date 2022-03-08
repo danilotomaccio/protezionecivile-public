@@ -29,7 +29,7 @@ __webpack_require__.r(__webpack_exports__);
     cars: () => _store__WEBPACK_IMPORTED_MODULE_2__.store.state.appState.cars,
     sections: () => {
       const cars = _store__WEBPACK_IMPORTED_MODULE_2__.store.state.appState.cars;
-      return [{
+      const sect = [{
         id: "car",
         question: "Scegli una macchina",
         options: cars ? cars.filter(c => !c.out).map(c => ({
@@ -47,8 +47,10 @@ __webpack_require__.r(__webpack_exports__);
         id: "odometer",
         question: "Contachilometri alla partenza",
         type: _model_Section__WEBPACK_IMPORTED_MODULE_1__.SectionType.OPEN,
-        mandatory: true
+        mandatory: true,
+        inputMode: 'numeric'
       }];
+      return sect;
     }
   },
 

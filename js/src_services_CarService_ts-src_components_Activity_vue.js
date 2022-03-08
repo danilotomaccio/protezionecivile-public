@@ -87,7 +87,7 @@ const _hoisted_6 = {
   key: 1,
   class: "open"
 };
-const _hoisted_7 = ["onInput"];
+const _hoisted_7 = ["inputmode", "onInput"];
 const _hoisted_8 = {
   class: "divider"
 };
@@ -118,6 +118,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ))])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
       class: "input",
       contenteditable: "true",
+      inputmode: section.inputMode ? section.inputMode : 'text',
       onInput: $event => this.res[section.id] = $event.target.innerText
     }, null, 40
     /* PROPS, HYDRATE_EVENTS */

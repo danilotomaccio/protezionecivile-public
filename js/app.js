@@ -444,7 +444,7 @@ const routes = [{
   }
 }, {
   path: '/admin',
-  name: 'Leave car',
+  name: 'Admin',
   component: () => __webpack_require__.e(/*! import() */ "src_views_Admin_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Admin.vue */ "./src/views/Admin.vue")),
   meta: {
     transition: 'expand-card',
